@@ -1,0 +1,66 @@
+SPRINGBOOT (LECTURE 10)
+
+
+ORM -  Object relational Modelling -> it is a technique used to map java objects to database tables
+ORM framework like Hibernates - can map the fields in the "User" (java class) to columns in "users" (database table)
+making it easier to insert , delete, update, retrieve records
+
+
+JPA - Java persistent API ->(persistence = to store data permanently) a way to achieve ORM , includes interfaces and annotations that is used in java classes requires persistence provider tools(ORM tools)for implementation
+
+Persistence Provider/ORM tools -> to use JPA you need persistence provider ,it special implementation of JPA specification e.g Hibernates. These providers implements the JPA interfaces and provide the underlying functionality to interact with DB
+
+conclusion: ORM <- JPA <- ORM tools
+
+Spring Data JPA :-> 
+Spring Data JPA is built on top of the JPA (Java
+Persistence API) specification, but it is not a JPA
+implementation itself. Instead, it simplifies
+working with JPA by providing higher-level
+abstractions and utilities. However, to use Spring
+Data JPA effectively, you still need a JPA
+implementation, such as Hibernate, EclipseLink,
+or another JPA-compliant provider, to handle the
+actual database interactions.
+
+
+JPA is primarily designed for working with relational
+databases, where data is stored in tables with a
+predefined schema. MongoDB, on the other hand, is a
+NoSQL database that uses a different data model,
+typically based on collections of documents, which are
+schema-less or have flexible schemas. This fundamental
+difference in data models and storage structures is why
+"JPA is not used with MongoDB"
+
+
+In the case of MongoDB, you don't have a
+traditional JPA persistence provider. MongoDB is
+a NoSQL database, and Spring Data MongoDB
+serves as the "persistence provider" for MongoDB.
+It provides the necessary abstractions and
+implementations to work with MongoDB in a
+Spring application.
+
+Spring Data MongoDB-:
+<dependency>
+<groupld>org.springframework.boot</groupld>
+<artifactId>spring-boot-starter-data-mongodb</artifactId>
+</dependency>
+
+Query Method DSL and Criteria API are two different
+ways to interact with a database when using Spring
+Data JPA for relational databases and Spring Data
+MongoDB for MongoDB databases.
+
+Spring Data JPA is a part of the Spring Framework
+that simplifies data access in Java applications, while
+Spring Data MongoDB provides similar functionality
+for MongoDB.
+
+
+Query Method DSL is a simple and convenient
+way to create queries based on method naming
+conventions, while the Criteria API offers a more
+dynamic and programmatic approach for
+building complex and custom queries.
